@@ -1,0 +1,9 @@
+{
+  "owm_api_key": "<YOUR_OWM_API_KEY>",
+  "city": "Granada, ES",
+  "bot_token": "<YOUR_TELEGRAM_BOT_TOKEN>",
+  "telegram_user_id": "YOUR_TELEGRAM_USER_ID>",
+  "forecast_time": "8:30",
+  "nightly_alarm_time": "23:00",
+  "daily_alarm_time": "8:00"
+}
