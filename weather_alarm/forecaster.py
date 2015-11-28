@@ -2,7 +2,7 @@ import pyowm
 import datetime
 
 
-class WeatherDelegate:
+class Forecaster:
     def __init__(self, api_key):
         self.__owm = pyowm.OWM(api_key)
 

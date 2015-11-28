@@ -5,20 +5,20 @@ import datetime
 import os
 from apscheduler.schedulers.blocking import BlockingScheduler
 from weather_alarm.constants import *
-from weather_alarm.weather_delegate import WeatherDelegate
-from weather_alarm.bot_delegate import BotDelegate
+from weather_alarm.forecaster import Forecaster
+from weather_alarm.sender import NotificationSender
 
 
-bot = BotDelegate(BOT_TOKEN)
-weather = WeatherDelegate(OWM_API_KEY)
+sender = NotificationSender(BOT_TOKEN, TELEGRAM_USER_ID)
+forecaster = Forecaster(OWM_API_KEY)
 
 
 def send_tomorrow_forecast(hour, time):
-    bot.send_msg_to_user(TELEGRAM_USER_ID, weather.tomorrow_forecast_at(CITY, hour, time))
+    sender.send_message(forecaster.tomorrow_forecast_at(CITY, hour, time))
 
 
 def send_current_observed_weather():
-    bot.send_msg_to_user(TELEGRAM_USER_ID, weather.current_observed_weather(CITY))
+    sender.send_message(forecaster.current_observed_weather(CITY))
 
 now = datetime.datetime.now()
 nightly_alarm_time = datetime.datetime(now.year, now.month, now.day, *NIGHTLY_ALARM_TIME)
