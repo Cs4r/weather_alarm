@@ -20,6 +20,7 @@ def send_tomorrow_forecast(hour, time):
 def send_current_observed_weather():
     sender.send_message(forecaster.current_observed_weather(CITY))
 
+
 now = datetime.datetime.now()
 nightly_alarm_time = datetime.datetime(now.year, now.month, now.day, *NIGHTLY_ALARM_TIME)
 daily_alarm_time = datetime.datetime(now.year, now.month, now.day, *DAILY_ALARM_TIME)

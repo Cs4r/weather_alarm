@@ -1,8 +1,8 @@
 {
-  "owm_api_key": "<YOUR_OWM_API_KEY>",
-  "city": "Granada, ES",
-  "bot_token": "<YOUR_TELEGRAM_BOT_TOKEN>",
-  "telegram_user_id": "YOUR_TELEGRAM_USER_ID>",
+  "owm_api_key": "47e62cbf16dd2956ef191185fdee3959",
+  "city": "Alcala la Real, ES",
+  "bot_token": "155277869:AAGZp-WY5tBMnRjW5az5bFyH3euRNb9Fd0U",
+  "telegram_user_id": 3688573,
   "forecast_time": "8:30",
   "nightly_alarm_time": "23:00",
   "daily_alarm_time": "8:00"
